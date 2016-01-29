@@ -1,11 +1,16 @@
 {
   "name": "beer-tracker",
   "version": "1.0.0",
-  "description": "keep track of where the good beers are",
+  "description": "Where did I get that delicious beer?",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jeff Carter",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.3.7"
+  }
 }
