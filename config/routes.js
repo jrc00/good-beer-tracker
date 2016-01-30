@@ -1,8 +1,11 @@
 var express = require('express');
 var mongoose = require('mongoose');
+var Beer = require('../models/beer');
 var app = express();
 var port = process.env.PORT || 3000;
 var router  = express.Router();
+
+// Testing the RESTful routes:
 
 router.get('/', function(req, res) {
   res.render('index');
@@ -13,8 +16,9 @@ router.get('/new', function(req, res) {
 });
 
 router.get('/:id', function(req, res) {
-  console.log("show");
-  res.send("SHOW");
+  Beer.findById( { _id: req.params.id }, function(beer) {
+    res.send(beer);
+  })
 });
 
 router.post('/', function(req, res) {

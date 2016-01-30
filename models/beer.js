@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var BeerSchema   = new mongoose.Schema({
   name: { type: String, required: true },
   brewery: String,
-  style: Number.
+  style: Number,
   location: {
     name: { type: String, required: true },
     address: String
