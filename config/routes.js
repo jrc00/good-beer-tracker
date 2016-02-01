@@ -17,7 +17,7 @@ router.get('/new', function(req, res) {
 
 router.get('/:id', function(req, res) {
   Beer.findById( { _id: req.params.id }, function(beer) {
-    res.send(beer);
+  res.render('/:id');
   })
 });
 
